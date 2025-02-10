@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+.nav-link {
+    @apply text-gray-600 hover:text-blue-600 transition-colors;
+}
+
+.section-title {
+    @apply text-3xl font-bold text-center mb-8;
+}
+
+.btn-primary {
+    @apply inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors;
+}
+
+.btn-secondary {
+    @apply inline-block bg-gray-200 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-300 transition-colors;
+}
+
+.education-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105;
+}
+
+.project-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:transform hover:scale-105;
+}
+
+.experience-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden;
+}
+
+.skill-bar {
+    @apply relative h-6 bg-gray-200 rounded-full overflow-hidden;
+}
+
+.skill-bar::before {
+    content: attr(data-skill);
+    @apply absolute left-4 top-1/2 transform -translate-y-1/2 text-sm text-gray-700 z-10;
+}
+
+.skill-progress {
+    @apply h-full bg-blue-600 transition-all duration-500;
+}
+
+.form-input {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600;
+}
+
+.social-link {
+    @apply text-white hover:text-blue-400 transition-colors text-xl;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slideIn {
+    animation: slideIn 0.5s ease-out forwards;
+}
